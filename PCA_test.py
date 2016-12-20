@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import sklearn.decomposition
 
 dim=2
@@ -34,5 +34,6 @@ np.savetxt("6_7v.csv", v, delimiter=",")#固有値
 xi=u[0][0]* after_x + u[1][0] * after_y
 eta=u[0][1]* after_x + u[1][1] * after_y
 
-plt.plot(xi,eta,"g")
-plt.show
+plt.scatter(xi,eta,c="g")
+filename = '6_7_plot.jpg'
+plt.savefig(filename)
